@@ -5,9 +5,14 @@ body {
   color: #EEE;
   letter-spacing: 2px;
   font-size: 1.5em;
+  text-align: center;
+}
+#container {
+  max-width: 500px;
+  margin: 0 auto;
 }
 #main_header {
-  font-size: 3em;
+  font-size: 2em;
   text-align: center;
   font-weight: 200;  
 }
@@ -27,6 +32,9 @@ body {
 #generate:hover{
   transition: .5s;
   background: #666;
+}
+#results {
+  text-align: left;
 }
 #results li{
   list-style: none;
