@@ -4,16 +4,16 @@ body {
   background: #424242;
   color: #EEE;
   letter-spacing: 2px;
-  font-size: 14pt;
+  font-size: 1.5em;
 }
 #main_header {
-  font-size: 50px;
+  font-size: 3em;
   text-align: center;
   font-weight: 200;  
 }
 #generate{
   text-decoration: none;
-  font-size: 40px;
+  font-size: 3em;
   border-radius: 8px;
   border: solid 1px #EEE;
   color: white;
