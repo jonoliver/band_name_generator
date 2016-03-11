@@ -7,16 +7,17 @@ body {
   font-size: 14pt;
 }
 #main_header {
+  font-size: 2.5em;
   text-align: center;
   font-weight: 200;  
 }
 #generate{
   text-decoration: none;
-  font-size: 24pt;
+  font-size: 1.5em;
   border-radius: 8px;
   border: solid 1px #EEE;
   color: white;
-  padding: 15px 20px;
+  padding: 30px;
   margin-bottom: 20px; 
   display: block;
   text-align: center;
