@@ -1,9 +1,10 @@
 module.exports = (grunt) ->
-  grunt.loadNpmTasks('grunt-contrib-coffee')
-  grunt.loadNpmTasks('grunt-contrib-watch')
-  grunt.loadNpmTasks('grunt-bower-install')
+  grunt.loadNpmTasks 'grunt-contrib-coffee'
+  grunt.loadNpmTasks 'grunt-contrib-watch'
+  grunt.loadNpmTasks 'grunt-bower-install'
   grunt.loadNpmTasks 'grunt-contrib-copy'
   grunt.loadNpmTasks 'grunt-contrib-clean'
+  grunt.loadNpmTasks 'grunt-gh-pages'
   
   grunt.initConfig
     watch:
@@ -33,6 +34,11 @@ module.exports = (grunt) ->
         
     clean:    
       build:
-        src: ['build']  
+        src: ['build']
+        
+    'gh-pages':
+      src: ['**', '!node_modules', '!.grunt']
+      options:
+        base: 'build'
         
   grunt.registerTask 'build', ['coffee:compile', 'clean:build', 'copy:build']
