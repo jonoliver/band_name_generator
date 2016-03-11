@@ -7,9 +7,11 @@ body {
   font-size: 14pt;
 }
 #main_header {
+  text-align: center;
   font-weight: 200;  
 }
 #generate{
+  width: auto;
   text-decoration: none;
   font-size: 24pt;
   border-radius: 8px;
@@ -29,12 +31,4 @@ body {
 #results li{
   list-style: none;
   padding: 5px;
-}
-@media (max-width : 480px) {
-  #main_header {
-    text-align: center;
-  }
-  #generate {
-    width: auto;
-  }
 }
