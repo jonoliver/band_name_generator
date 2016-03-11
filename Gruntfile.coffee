@@ -42,3 +42,4 @@ module.exports = (grunt) ->
         base: 'build'
         
   grunt.registerTask 'build', ['coffee:compile', 'clean:build', 'copy:build']
+  grunt.registerTask 'publish', ['build', 'gh-pages']
