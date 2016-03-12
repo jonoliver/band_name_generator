@@ -200,7 +200,8 @@
       li = _(RandomizeAll()).map(function(name) {
         return "<li>" + name + "</li>";
       });
-      return $('#results').html(li);
+      $('#results').html(li);
+      return ga('send', 'event', 'generate', 'click');
     });
   });
 

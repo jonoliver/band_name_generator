@@ -64,3 +64,4 @@ $(document).ready ->
   $('#generate').click ->
     li = _(RandomizeAll()).map (name) -> "<li>#{name}</li>"
     $('#results').html(li)
+    ga 'send', 'event', 'generate', 'click'
