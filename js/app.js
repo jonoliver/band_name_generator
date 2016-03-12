@@ -197,6 +197,7 @@
   $(document).ready(function() {
     return $('#generate').click(function() {
       var li;
+      _trackEvent('generate', 'click');
       li = _(RandomizeAll()).map(function(name) {
         return "<li>" + name + "</li>";
       });
