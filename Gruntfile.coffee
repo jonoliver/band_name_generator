@@ -2,6 +2,7 @@ module.exports = (grunt) ->
   grunt.loadNpmTasks 'grunt-contrib-watch'
   grunt.loadNpmTasks 'grunt-contrib-coffee'
   grunt.loadNpmTasks 'grunt-browserify'
+  grunt.loadNpmTasks 'grunt-contrib-uglify'
   grunt.loadNpmTasks 'grunt-contrib-copy'
   grunt.loadNpmTasks 'grunt-contrib-clean'
   grunt.loadNpmTasks 'grunt-gh-pages'
@@ -24,6 +25,11 @@ module.exports = (grunt) ->
     browserify:
       'apps/web/app.js': ['apps/web/node_modules/main.js']
     
+    uglify:
+      my_target:
+        files:
+          'apps/web/app.js': 'apps/web/app.js'
+    
     copy: 
       build:
         cwd: 'apps/web/'
@@ -40,5 +46,5 @@ module.exports = (grunt) ->
       options:
         base: 'build'
         
-  grunt.registerTask 'build', ['coffee:compile', 'browserify', 'clean:build', 'copy:build']
+  grunt.registerTask 'build', ['coffee:compile', 'browserify', 'uglify', 'clean:build', 'copy:build']
   grunt.registerTask 'publish', ['build', 'gh-pages']
