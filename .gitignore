@@ -1,3 +1,5 @@
-node_modules
+/node_modules
+/apps/web/node_modules
+/apps/web/app.js
 .grunt
 build

@@ -1,7 +1,7 @@
 module.exports = (grunt) ->
-  grunt.loadNpmTasks 'grunt-contrib-coffee'
   grunt.loadNpmTasks 'grunt-contrib-watch'
-  grunt.loadNpmTasks 'grunt-bower-install'
+  grunt.loadNpmTasks 'grunt-contrib-coffee'
+  grunt.loadNpmTasks 'grunt-browserify'
   grunt.loadNpmTasks 'grunt-contrib-copy'
   grunt.loadNpmTasks 'grunt-contrib-clean'
   grunt.loadNpmTasks 'grunt-gh-pages'
@@ -9,26 +9,25 @@ module.exports = (grunt) ->
   grunt.initConfig
     watch:
       coffee:
-        files: 'src/*.coffee'
+        files: 'apps/**/*.coffee'
         tasks: ['coffee:compile']
 
     coffee:
       compile:
         expand: true,
         flatten: true,
-        cwd: "#{__dirname}/src/",
-        src: ['*.coffee'],
-        dest: 'js/',
+        cwd: "#{__dirname}/apps",
+        src: ['**/*.coffee'],
+        dest: 'apps/web/node_modules',
         ext: '.js'
         
-    bowerInstall:
-      target:
-        src: ['index.html']
-        
+    browserify:
+      'apps/web/app.js': ['apps/web/node_modules/main.js']
+    
     copy: 
       build:
-        # cwd: ''
-        src: [ '*.html', 'js/**', 'css/**', 'bower_components/**' ]
+        cwd: 'apps/web/'
+        src: [ '*.html', '*.js', 'css/**' ]
         dest: 'build'
         expand: true
         
@@ -41,5 +40,5 @@ module.exports = (grunt) ->
       options:
         base: 'build'
         
-  grunt.registerTask 'build', ['coffee:compile', 'clean:build', 'copy:build']
+  grunt.registerTask 'build', ['coffee:compile', 'browserify', 'clean:build', 'copy:build']
   grunt.registerTask 'publish', ['build', 'gh-pages']
