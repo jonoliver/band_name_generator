@@ -24,11 +24,13 @@ module.exports = (grunt) ->
         
     browserify:
       'apps/web/app.js': ['apps/web/node_modules/main.js']
+      'apps/web/poem.js': ['apps/web/node_modules/poem.js']
     
     uglify:
       my_target:
         files:
           'apps/web/app.js': 'apps/web/app.js'
+          'apps/web/poem.js': 'apps/web/poem.js'
     
     copy: 
       build:

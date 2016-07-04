@@ -1,4 +1,4 @@
-a = require 'app'
+a = require 'poem'
 $ = require 'jquery'
 _ = require 'underscore'
 
