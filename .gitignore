@@ -1,5 +1,5 @@
 /node_modules
 /apps/web/node_modules
-/apps/web/*.js
+/apps/web/js
 .grunt
 build
