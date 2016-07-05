@@ -1,4 +1,4 @@
-a = require 'app'
+a = require 'band_names'
 $ = require 'jquery'
 _ = require 'underscore'
 

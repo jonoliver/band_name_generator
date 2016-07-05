@@ -36,7 +36,7 @@ module.exports = (grunt) ->
     copy: 
       build:
         cwd: 'apps/web/'
-        src: [ '*.html', 'js/*.js', 'css/**' ]
+        src: [ '**/*.html', 'js/*.js', 'css/**' ]
         dest: 'build'
         expand: true
         

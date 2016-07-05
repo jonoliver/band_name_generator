@@ -5,8 +5,8 @@ new webpack.optimize.CommonsChunkPlugin('./apps/web/js/common.js');
 
 module.exports = {
   entry: {
-    band: './apps/web/main.coffee',
-    poem: './apps/web/poem.coffee'
+    band: './apps/web/band_names/index.coffee',
+    poem: './apps/web/poem/index.coffee'
   },
   output: {
     path: '.',

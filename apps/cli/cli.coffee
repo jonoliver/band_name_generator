@@ -1,2 +1,2 @@
-app = require 'app'
+app = require 'band_names'
 console.log app.RandomizeAll().join('\n')
