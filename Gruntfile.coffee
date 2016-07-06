@@ -18,11 +18,10 @@ module.exports = (grunt) ->
     'webpack-dev-server':
       options:
         webpack: webpackConfig
-        publicPath: '/' + webpackConfig.output.publicPath # TODO: fix this
       start:
         keepAlive: true
         webpack:
-          devtool: 'eval'
+          devtool: 'sourcemap'
           debug: true
     watch: app:
       files: [
