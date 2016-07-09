@@ -5,5 +5,5 @@ console.log poem
 console.log poem.join('\n').length
 
 TwitterBot = require("node-twitterbot").TwitterBot
-Bot = new TwitterBot('config.json')
+Bot = new TwitterBot("#{__dirname}/config.json")
 Bot.tweet(poem.join('\n'));
