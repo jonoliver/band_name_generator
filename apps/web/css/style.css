@@ -16,7 +16,8 @@ body {
   text-align: center;
   font-weight: 200;  
 }
-#generate{
+
+a{
   text-decoration: none;
   font-size: 3em;
   border-radius: 8px;
@@ -29,7 +30,7 @@ body {
   width: auto;
 }
 
-#generate:hover{
+a:hover{
   transition: .5s;
   background: #666;
 }
