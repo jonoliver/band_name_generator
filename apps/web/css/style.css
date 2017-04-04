@@ -30,6 +30,7 @@ a{
   text-align: center;
   width: auto;
   text-transform: uppercase;
+  background: #555;
 }
 
 a:hover{
