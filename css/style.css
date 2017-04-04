@@ -8,19 +8,17 @@ body {
   text-align: center;
 }
 #container {
-  max-width: 400px;
+  max-width: 700px;
   margin: 0 auto;
 }
 #main_header {
-  font-size: 1.5em;
-  text-align: center;
-  font-weight: 100;
-  text-transform: uppercase;
-}
-
-a{
-  text-decoration: none;
   font-size: 2em;
+  text-align: center;
+  font-weight: 200;  
+}
+#generate{
+  text-decoration: none;
+  font-size: 3em;
   border-radius: 8px;
   border: solid 1px #EEE;
   color: white;
@@ -29,34 +27,14 @@ a{
   display: block;
   text-align: center;
   width: auto;
-  text-transform: uppercase;
-  background: #555;
 }
 
-a:hover{
+#generate:hover{
   transition: .5s;
   background: #666;
 }
-
-#generate   {
-  animation: button-color 5s infinite;
-  transition-timing-function: cubic-bezier(0, 0, 0.71, 0.26);;
-}
-
-@keyframes button-color
-{
-  0%   {background:#925353;}
-  25%  {background:#537f92;}
-  50%   {background:#539285;}
-  75%   {background:#8a9253;}
-  100%   {background:#925353;}
-}
-
 #results {
-  display: inline-block;
   text-align: left;
-  margin: 0 auto;
-  padding: 0;
 }
 #results li{
   list-style: none;
