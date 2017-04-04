@@ -3,7 +3,7 @@ module.exports = (grunt) ->
   require('matchdep').filterAll('grunt-*').forEach grunt.loadNpmTasks
   webpack = require('webpack')
   webpackConfig = require('./webpack.config.js')
-  
+
   grunt.initConfig
     webpack:
       options: webpackConfig
@@ -32,14 +32,14 @@ module.exports = (grunt) ->
       tasks: [ 'webpack:build-dev' ]
       options: spawn: false
 
-    copy: 
+    copy:
       build:
         cwd: 'apps/web/'
-        src: [ '**/*.html', 'js/*.js', 'css/**' ]
+        src: [ '**/*.html', '**/js/*.js', 'css/**' ]
         dest: 'build'
         expand: true
-        
-    clean:    
+
+    clean:
       build:
         src: ['build']
 
@@ -58,7 +58,7 @@ module.exports = (grunt) ->
     'webpack:build-dev'
     'watch:app'
   ]
-  
+
   # Production build
   grunt.registerTask 'build', ['webpack:build', 'clean:build', 'copy:build']
   grunt.registerTask 'publish', ['build', 'gh-pages']

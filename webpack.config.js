@@ -9,9 +9,9 @@ module.exports = {
     poem: './apps/web/poem/index.coffee'
   },
   output: {
-    path: './apps/web',
+    path: '.',
     publicPath: '/js/',
-    filename: './apps/web/js/[name].js'
+    filename: '/js/[name].js'
   },
   module: {
     loaders: [

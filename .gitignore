@@ -3,3 +3,4 @@
 /apps/bots/**/config.json
 .grunt
 build
+/js
