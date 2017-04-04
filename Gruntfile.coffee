@@ -18,6 +18,8 @@ module.exports = (grunt) ->
     'webpack-dev-server':
       options:
         webpack: webpackConfig
+        # port: '3300'
+        # host: "0.0.0.0"
       start:
         keepAlive: true
         webpack:
