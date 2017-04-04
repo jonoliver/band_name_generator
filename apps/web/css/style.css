@@ -37,6 +37,21 @@ a:hover{
   transition: .5s;
   background: #666;
 }
+
+#generate   {
+  animation: button-color 5s infinite;
+  transition-timing-function: cubic-bezier(0, 0, 0.71, 0.26);;
+}
+
+@keyframes button-color
+{
+  0%   {background:#925353;}
+  25%  {background:#537f92;}
+  50%   {background:#539285;}
+  75%   {background:#8a9253;}
+  100%   {background:#925353;}
+}
+
 #results {
   display: inline-block;
   text-align: left;
